@@ -24,12 +24,12 @@ pipeline {
         }
         stage('terraform plan') {
             steps {
-                sh 'pwd; ls ./jenkins; sudo /opt/terraform plan ./jenkins'
+                sh 'pwd; sudo /opt/terraform plan ./jenkins'
             }
         }
         stage('terraform ended') {
             steps {
-                sh 'pwd; echo "Ended....!!"'
+                sh 'pwd; ls ./jenkins; echo "Ended....!!"'
             }
         }
 

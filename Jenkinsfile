@@ -24,7 +24,7 @@ pipeline {
         }
         stage('terraform plan') {
             steps {
-                sh 'pwd; sudo cp /home/admin/terraform.tfvars ./jenkins; ls ./jenkins; sudo /opt/terraform plan ./jenkins'
+                sh 'pwd; ls ./jenkins; sudo /opt/terraform plan ./jenkins'
             }
         }
         stage('terraform ended') {

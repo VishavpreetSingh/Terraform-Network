@@ -19,12 +19,12 @@ pipeline {
         }
         stage('terraform init') {
             steps {
-                sh 'pwd; sudo /opt/terraform init ./jenkins'
+                sh 'pwd; sudo /opt/terraform init'
             }
         }
         stage('terraform plan') {
             steps {
-                sh 'pwd; sudo /opt/terraform plan ./jenkins'
+                sh 'pwd; sudo /opt/terraform plan'
             }
         }
         stage('terraform ended') {

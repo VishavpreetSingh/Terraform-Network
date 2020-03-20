@@ -24,7 +24,7 @@ pipeline {
         }
         stage('terraform plan') {
             steps {
-                sh 'pwd; sudo /opt/terraform plan -out=tfplan -input=false -var-file=terraform.tfvars
+                sh 'pwd; sudo /opt/terraform plan -out=tfplan -input=false -var-file=terraform.tfvars'
             }
         }
         stage('terraform ended') {

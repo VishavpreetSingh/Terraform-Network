@@ -1,6 +1,6 @@
 ## Labels
-aws_access_key_id="xxxxxxx"
-aws_secret_access_key="xxxxxx"
+aws_access_key_id="AKIA23JZC7A25HTCAGOK"
+aws_secret_access_key="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"
 vpc_region="ap-southeast-2"
 vpc_name="vpc_name_tf"
 vpc_cidr_block="10.10.0.0/26"

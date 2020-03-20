@@ -27,6 +27,12 @@ pipeline {
                 sh 'pwd; cd Terraform-Network; sudo cp /home/admin/terraform.tfvars . ; sudo /opt/terraform plan -out=tfplan -input=false -var-file=terraform.tfvars'
             }
         }
+        
+        stage('terraform apply') {
+            steps {
+                sh 'echo "****************Applying Terraform***********"; sudo /opt/terraform apply -input=false tfplan'
+            }
+        }
         stage('terraform ended') {
             steps {
                 sh 'pwd; echo "Ended....!!"'

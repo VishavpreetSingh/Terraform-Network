@@ -19,17 +19,17 @@ pipeline {
         }
         stage('terraform init') {
             steps {
-                sh 'pwd; sudo /opt/terraform init ./Terraform-Network'
+                sh 'pwd; sudo /opt/terraform init -input=false'
             }
         }
         stage('terraform plan') {
             steps {
-                sh 'pwd; sudo /opt/terraform plan ./Terraform-Network'
+                sh 'pwd; sudo /opt/terraform plan -out=tfplan -input=false -var-file=terraform.tfvars
             }
         }
         stage('terraform ended') {
             steps {
-                sh 'pwd; ls ./jenkins; echo "Ended....!!"'
+                sh 'pwd; echo "Ended....!!"'
             }
         }
 

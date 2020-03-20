@@ -30,7 +30,7 @@ pipeline {
         
         stage('terraform apply') {
             steps {
-                sh 'echo "****************Applying Terraform***********"; sudo /opt/terraform apply -input=false tfplan'
+                sh 'pwd; cd Terraform-Network; echo "****************Applying Terraform***********"; sudo /opt/terraform apply -input=false tfplan'
             }
         }
         stage('terraform ended') {
